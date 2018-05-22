@@ -6,17 +6,17 @@ jobs:
         steps:
           - sleep: sleep 10
         requires: [~commit, ~pr]
-    job2:
+    blockedByJob1:
         steps:
           - echo: echo i am blocked
         requires: [~commit, ~pr]
         blockedBy: job1
-    job3:
+    notblocked:
         steps:
           - echo: echo bye
         requires: [~commit, ~pr]
         blockedBy: job1
-    job4:
+    blockedByExternal:
         steps:
           - echo: echo bye
         requires: [~commit, ~pr]
