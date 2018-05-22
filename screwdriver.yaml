@@ -1,0 +1,13 @@
+shared:
+    image: node:6
+
+jobs:
+    job1:
+        steps:
+          - sleep: sleep 10
+        requires: [~commit, ~pr]
+    job2:
+        steps:
+          - echo: echo bye
+        requires: [~commit, ~pr]
+        blockedBy: job1
