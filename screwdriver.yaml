@@ -8,6 +8,11 @@ jobs:
         requires: [~commit, ~pr]
     job2:
         steps:
+          - echo: echo i am blocked
+        requires: [~commit, ~pr]
+        blockedBy: job1
+    job3:
+        steps:
           - echo: echo bye
         requires: [~commit, ~pr]
         blockedBy: job1
