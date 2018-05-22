@@ -20,4 +20,4 @@ jobs:
         steps:
           - echo: echo bye
         requires: [~commit, ~pr]
-        blockedBy: sd@526:job1
+        blockedBy: ~sd@526:job1
