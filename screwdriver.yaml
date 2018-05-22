@@ -15,7 +15,6 @@ jobs:
         steps:
           - echo: echo bye
         requires: [~commit, ~pr]
-        blockedBy: job1
     blockedByExternal:
         steps:
           - echo: echo bye
