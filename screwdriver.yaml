@@ -16,3 +16,8 @@ jobs:
           - echo: echo bye
         requires: [~commit, ~pr]
         blockedBy: job1
+    job4:
+        steps:
+          - echo: echo bye
+        requires: [~commit, ~pr]
+        blockedBy: sd@526:job1
