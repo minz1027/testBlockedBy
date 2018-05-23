@@ -8,7 +8,7 @@ jobs:
         requires: [~commit, ~pr]
     job2:
         steps:
-          - echo: echo bye
+          - echo: sleep 30
         requires: [~commit, ~pr]
     blockedByJob1:
         steps:
