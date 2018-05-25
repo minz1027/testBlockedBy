@@ -8,11 +8,11 @@ jobs:
         requires: [~commit, ~pr]
     job2:
         steps:
-          - echo: sleep 10
+          - echo: sleep 20
         requires: [~commit, ~pr]
     job3:
         steps:
-          - echo: sleep 20
+          - echo: sleep 30
         requires: [~commit, ~pr]
     notblocked:
         steps:
