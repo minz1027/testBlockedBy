@@ -12,7 +12,7 @@ jobs:
         requires: [~commit, ~pr]
     job3:
         steps:
-          - echo: sleep 30
+          - echo: sleep 100
         requires: [~commit, ~pr]
     notblocked:
         steps:
