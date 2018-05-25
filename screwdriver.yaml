@@ -14,6 +14,10 @@ jobs:
         steps:
           - echo: sleep 20
         requires: [~commit, ~pr]
+    notblocked:
+        steps:
+          - echo: echo bye
+        requires: job1
     bbJob2:
         steps:
           - echo: echo bye
