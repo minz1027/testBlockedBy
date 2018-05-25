@@ -27,6 +27,6 @@ jobs:
     bbEx:
         steps:
           - echo: echo bye
-        blockedBy: ~sd@526:job1
+        blockedBy: ~sd@173:main
         requires: [~commit, ~pr]
 
