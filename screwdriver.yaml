@@ -4,11 +4,11 @@ shared:
 jobs:
     job1:
         steps:
-          - sleep: sleep 10
+          - sleep: sleep 5
         requires: [~commit, ~pr]
     job2:
         steps:
-          - echo: sleep 30
+          - echo: sleep 10
         requires: [~commit, ~pr]
     blockedByJob1:
         steps:
