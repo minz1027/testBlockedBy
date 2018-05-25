@@ -28,3 +28,5 @@ jobs:
         steps:
           - echo: echo bye
         blockedBy: ~sd@526:job1
+        requires: [~commit, ~pr]
+
