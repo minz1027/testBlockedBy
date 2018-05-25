@@ -4,25 +4,25 @@ shared:
 jobs:
     job1:
         steps:
-          - sleep: sleep 5
+          - sleep: sleep 10
         requires: [~commit, ~pr]
     job2:
         steps:
-          - echo: sleep 10
+          - echo: sleep 110
         requires: [~commit, ~pr]
-    blockedByJob1:
+    bbJob1:
         steps:
           - echo: echo i am blocked
         requires: [~commit, ~pr]
         blockedBy: job1
-    blockedByJob12:
+    bbJob12:
         steps:
           - echo: echo i am blocked
         requires: [~commit, ~pr]
         blockedBy: 
             - job1
             - job2
-    blockedByExternal:
+    bbExternal:
         steps:
           - echo: echo bye
         requires: [~commit, ~pr]
