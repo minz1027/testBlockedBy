@@ -22,12 +22,12 @@ jobs:
         steps:
           - echo: echo bye
         requires: job1
-        blockedBy: job2
+        blockedBy: ~job2
     bbJob23:
         steps:
             - echo: echo hello
         requires: job1
-        blockedBy: [job2, job3]
+        blockedBy: [~job2, ~job3]
     bbEx:
         steps:
           - echo: echo bye
